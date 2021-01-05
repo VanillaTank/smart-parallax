@@ -1,0 +1,443 @@
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.parallax {
+    position: relative;
+    height: 100%; 
+}
+
+.parallax__mointen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.parallax__mointen_1 {
+    background: url('m_1.png') 0 0 /cover no-repeat;
+}
+
+.parallax__mointen_2 {
+    z-index: 4;
+    background: url('m_2.png') bottom right 0 /45% no-repeat;
+}
+
+.parallax__mointen_3 {
+    z-index: 4;
+    background: url('m_3.png') left bottom  /100% no-repeat;
+}
+.parallax__fog {
+    background: url('fog_1.png') left bottom  /100% no-repeat;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+.content {
+    position: relative;
+    z-index: 3;
+    top: -100vh;
+}
+
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, li {
+    padding: 0;
+    list-style: none;
+}
+body {
+    font-family: SBSansDisplay-Regular, Arial, Helvetica, sans-serif;
+    color: #000;
+}
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: 100%;
+}
+.section{
+    padding: 30px 0;
+}
+
+/* header */
+.header {
+    position: relative;
+    z-index: 10;
+}
+.header-inner{
+    padding: 30px 0;
+    text-align: center;
+    border-bottom: 1px solid#fff;
+    margin-top: 10vh;
+}
+.title {
+    font-family: SBSansDisplay-SemiBold, Arial, Helvetica, sans-serif;
+    font-size: 130px;
+}
+.subtitle {
+    font-family: SBSansDisplay-Regular, Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    max-width: 900px;
+    margin: 10px auto 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+.header-inner-wrap{
+    text-align: center;
+    margin-top: 20vh;
+    opacity: 0;
+}
+.header-inner__text{
+    font-family: SBSansDisplay-Regular, Arial, Helvetica, sans-serif;
+    font-size: 38px;
+    max-width: 900px;
+    margin: 0 auto 1em;
+    text-align: center;
+}
+/* benefits */
+
+.benefits-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 32px;
+    max-width: 100%;
+
+}
+.benifits__text{
+    width: 50%;
+    text-align: center;
+}
+.benifits__img-wrap{
+    width: 50%;
+    text-align: center;
+}
+.benifits__salut{
+    width: 100%;
+    margin: 65px 0;
+}
+.benifits__img{
+    width: 220px;
+}
+/* eсoSistem */
+.eсoSistem__descr{
+    font-size: 40px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.ekoSystem__list-item img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.ekoSystem__list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.ekoSystem__list-item{
+    text-align: center;
+    margin-top: 30px;
+    width: 33%;
+    padding: 0 15px;
+    max-height: 320px;
+}
+
+/* Переворачивающиеся карточки */
+.card{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    perspective: 1000px;
+    -webkit-perspective: 0;
+}
+.front, .back{
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    -webkit-backface-visibility: hidden;
+    visibility:visible;
+}
+.back{
+    position: absolute; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(196, 233, 61);
+    transform: rotateY(180deg);
+
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+.card:hover .front {transform: rotateY(180deg);}
+.card:hover .back {transform: rotateY(360deg);}
+
+/* enter */
+.enter__text{
+    font-size: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+.enter__btn{
+    margin: 20px auto;
+    background-color: #21a038;
+    outline: none;
+    border: 1px solid transparent;
+    color: #fff;
+    height: 100%;
+    white-space: nowrap;
+    font-size: 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: SBSansDisplay-SemiBold, Arial, Helvetica, sans-serif;
+    letter-spacing: .03em;
+    cursor: pointer;
+    padding: 35px 56px;
+
+}
+.enter__btn:hover{
+    background-color: #21b056;
+}
+/* footer */
+.footer{
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+@media(max-width: 1142px){
+    .title{
+        font-size: 117px;
+    }
+    .subtitle{
+        font-size: 28px;
+    }
+    .header-inner__text{
+        font-size: 31px;
+    }
+}
+@media(max-width: 980px){
+    .title {
+        font-size: 111px;
+    }
+    .header-inner {
+        padding: 13px 0;
+    }
+    .subtitle {
+        font-size: 25px;
+    }
+    .header-inner-wrap{
+        margin-top: 176px;
+    }
+    .header-inner__text{
+        font-size: 27px;
+    }
+    .benifits__salut{
+        text-align: center;
+    }
+    .eсoSistem__descr{
+        font-size: 38px;
+    }
+    .enter__text{
+        font-size: 28px;
+        max-width: 746px;
+    }
+}
+
+@media(orientation: landscape) and (max-width: 980px) {
+    .header {
+        height: auto;
+    }
+    .header-inner-wrap{
+        margin-top: 85px;
+    }
+}
+@media(max-width: 880px){
+    .title {
+        font-size: 96px;
+    }
+    .subtitle {
+        font-size: 23px;
+    }
+    .header-inner-wrap{
+        max-width: 526px;
+        margin: 176px auto 0;
+    }
+    .header-inner__text {
+        font-size: 24px;
+    }
+    .eсoSistem__descr {
+        font-size: 36px;
+    }
+}
+@media(max-width:790px){
+    .title {
+        font-size: 91px;
+    }
+    .header-inner {
+        padding: 5px 0;
+    }
+    .subtitle {
+        font-size: 19px;
+    }
+    .header-inner__text {
+        font-size: 22px;
+    }
+    .eсoSistem__descr{
+        max-width: 665px;
+    }
+    .back{
+        font-size: 14px;
+        line-height: 16px;
+    }
+}
+@media(max-width: 630px){
+    .title {
+        font-size: 83px;
+    }
+    .header-inner {
+        padding: 0;
+    }
+    .subtitle {
+        font-size: 18px;
+    }
+    .benefits-wrap{
+        font-size: 28px;
+    }
+    .benifits__img{
+        width: 183px;
+    }
+    .eсoSistem__descr {
+        max-width: 665px;
+        font-size: 32px;
+    }
+    .enter__text {
+        font-size: 25px;
+    }
+    .back{
+        padding: 10px;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+@media(max-width: 552px){
+    .title {
+        font-size: 65px;
+    }
+    .subtitle {
+        font-size: 16px;
+    }
+    .header-inner__text {
+        font-size: 20px;
+    }
+    .header-inner-wrap {
+        max-width: 431px;
+    }    
+    .benefits-wrap{
+        font-size: 22px;
+    }
+    .eсoSistem__descr {
+        font-size: 29px;
+    }
+    .ekoSystem__list-item{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .back{
+        padding: 15px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+@media(max-width: 500px){ 
+    .benifits__img {
+        width: 145px;
+    } 
+    .eсoSistem__descr {
+        font-size: 26px;
+    }
+}
+@media(max-width: 450px){
+    .title {
+        font-size: 50px;
+    }
+    .header-inner__text {
+        font-size: 18px;
+    }
+    .ekoSystem__list-item{
+        width: 100%;
+        padding: 0 15px;
+    }
+    .enter__text {
+        font-size: 20px;
+    }
+    .enter__btn{
+        font-size: 18px;
+        padding: 26px 56px;
+    }
+    .back{
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
+}
+@media(max-width: 370px){
+    .title {
+        font-size: 42px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    .header-inner__text {
+        font-size: 15px;
+    }
+    .benifits__img {
+        width: 132px;
+    }
+    .benefits-wrap {
+        font-size: 16px;
+    }
+    .eсoSistem__descr {
+        font-size: 20px;
+    }
+    .enter__btn{
+        font-size: 16px;
+        padding: 20px 46px;
+    }
+    .footer__text{
+        font-size: 12px;
+    }
+
+}
